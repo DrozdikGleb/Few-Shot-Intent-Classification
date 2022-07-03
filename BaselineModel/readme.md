@@ -1,0 +1,4 @@
+* To train BERT + Head, run 
+  * `python train_classifier.py --train_file_path ../Few-Shot-Intent-Detection/Datasets/BANKING77/train_5/ --dev_file_path ../Few-Shot-Intent-Detection/Datasets/BANKING77/test/ --do_lower_case --bert_model roberta-base --few_shot_num 10 --num_trials 1 --num_train_epochs 25 --learning_rate 5e-5 --train_batch_size 30 --save_model_path saving_checkpoints --output_dir ./banking77`
+* To train NLI+KNN, run
+  *  `python train_emb_knn.py -- train_file_path ../Few-Shot-Intent-Detection/Datasets/BANKING77/train_5/ --dev_file_path ../Few-Shot-Intent-Detection/Datasets/BANKING77/test/ --do_lower_case --bert_model roberta-base --few_shot_num 5 --num_trials 5 --num_train_epochs 25 --learning_rate 2e-5 --train_batch_size 100 --save_model_path saving_checkpoints --output_dir ./banking77/`
